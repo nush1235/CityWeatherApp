@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="370dp"
         android:layout_height="60dp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/cityname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/currenttemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -51,10 +51,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/cityname" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/maxtemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="116dp"
@@ -66,10 +66,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/cityname" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/mintemp"
         android:layout_width="135dp"
         android:layout_height="47dp"
         android:layout_marginTop="152dp"
@@ -81,19 +81,19 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/cityname" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="226dp"
         android:layout_height="226dp"
         android:layout_marginStart="-60dp"
-        android:layout_marginTop="544dp"
-        android:alpha="0.5"
+        android:layout_marginTop="536dp"
+        android:alpha="0.75"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/cityname"
         app:srcCompat="@drawable/sun" />
 
     <LinearLayout
@@ -105,7 +105,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/mintemp">
 
         <!-- Row 1 -->
         <LinearLayout
@@ -127,10 +127,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
-                android:text="Precipitation"
+                android:text="Pressure"
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/pressure"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
@@ -163,6 +164,7 @@
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/Humidity"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
@@ -194,6 +196,7 @@
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/windspeed"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
@@ -204,6 +207,21 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/Condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/iosevka_charon_regular"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/cityname"
+        app:layout_constraintVertical_bias="0.975" />
 
 
     <!--    lottie animation-->

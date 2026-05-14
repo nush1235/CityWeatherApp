@@ -11,7 +11,9 @@ android {
             minorApiLevel = 1
         }
     }
-
+buildFeatures{
+    viewBinding= true
+}
     defaultConfig {
         applicationId = "com.example.weatherapp"
         minSdk = 24
@@ -50,5 +52,11 @@ dependencies {
     //lottie animation
     implementation ("com.airbnb.android:lottie:6.7.1")
     implementation("androidx.core:core-splashscreen:1.0.1")
+//    GSON converter
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+// retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+
+
 
 }
